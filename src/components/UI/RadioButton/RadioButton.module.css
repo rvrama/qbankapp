@@ -1,0 +1,10 @@
+.RadioButtonChoices{
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12pt;
+    margin:10px 20px 10px 20px;
+    background-color:darkslategray;
+    color:white;
+    text-align:left;
+    width: 90%;
+}

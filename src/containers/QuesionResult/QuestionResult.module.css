@@ -1,0 +1,91 @@
+.Answer{
+    display: inline-flexbox;
+       margin:5px 5px 5px 5px;
+       padding:5px 5px 5px 5px;
+       color: black;
+       border: 4pt solid limegreen;  
+}
+
+.WrongAnswer{
+    display: inline-flexbox;
+       margin:5px 5px 5px 5px;
+       padding:5px 5px 5px 5px;
+       color: black;
+      border: 4pt solid red;
+}
+
+.Qtnscreen{
+    display: inline-flexbox;
+    margin:5px 5px 5px 5px;
+    padding:5px 5px 5px 5px;
+    border: 2pt solid black;
+    background-color:wheat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align:left;
+   }
+   
+.Choices {
+    display: inline-flexbox;
+    margin:5px 5px 5px 5px;
+    padding:5px 5px 5px 5px;
+    color:black;
+    border: 2pt solid black;
+}
+   
+   
+   .QtnTxt{
+       word-wrap: normal;
+       color:black;
+   }
+   
+   
+   .Msg{
+       font-size: 14pt;
+       color:black;
+       text-align: center;
+       text-decoration: none;
+   }
+   
+   /* .Screenbar{
+       width:80%;
+       float:left;
+       background-color: lightblue;
+       color:black;
+   }
+   
+   .Displaybar{
+       width:100%;
+       float:left;
+   }
+   
+   .Navbar {
+       border: 2pt solid black;
+       width:80pt;
+       background-color: lightblue;
+       float:left;
+       margin: 3pt 3pt 3pt 3pt;
+       color:black;
+       }
+   
+   .NavbarTxt {
+       width:80pt;
+       background-color: lightblue;
+       border: 2pt solid black;
+       float:left;
+       margin: 3pt 3pt 3pt 3pt;
+       font-family: Arial, Helvetica, sans-serif;
+       color: black;
+       }
+   
+   .Blk{
+       display: inline-block;
+       width:20%;
+       padding-left: 4pt;
+       padding-right: 4pt;
+       font-size: 12pt;
+       margin: 2pt 2pt 2pt 2pt;
+   }
+   
+   .Blk:hover{
+       cursor: default;
+   } */

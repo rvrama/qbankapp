@@ -1,0 +1,16 @@
+
+.Groups{
+    width:100%;
+    display:block;
+}
+
+@media (min-width:500px) {
+    
+.Groups{
+    width:100%;
+    height: 200px;
+    display:flex;   
+    flex-flow: row wrap;
+    justify-content: space-between;
+    }
+}

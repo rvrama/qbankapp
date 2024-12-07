@@ -1,0 +1,33 @@
+.Screenbar{
+    width:80%;
+    float:left;
+    background-color: darkslategray;
+    border: 2pt solid coral;
+    color:black;
+}
+
+.Displaybar{
+    width:100%;
+    float:left;
+}
+
+.Navbar {
+    margin: 0px 3px 3px 3px;
+    background-color: darkslategray; 
+    border: 2pt solid coral;
+    width:80%;
+    display: block;
+    color: white;
+    }
+
+    @media (min-width: 500px) {
+        .Navbar {
+            margin: 0px 3px;
+            width:7%;
+            background-color: darkslategray;
+            border: 2pt solid coral;
+            float:left;
+            display: block;
+            color:white;
+        }
+    }

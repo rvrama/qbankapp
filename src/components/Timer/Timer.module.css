@@ -1,0 +1,19 @@
+.Timer{
+    width:80%;
+    background-color: wheat;
+    display:flex;
+    justify-content: space-around;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Time{
+    
+    font-size:14pt;
+    color:black;
+    margin:auto;
+}
+
+.Info{
+    font-size: 11pt;
+    margin:auto;
+}

@@ -1,0 +1,17 @@
+.Results{
+    display:block;
+    box-sizing: border-box;
+}
+
+.GroupBlock{
+    background-color: honeydew;
+    color:black;
+    box-shadow: 2pt 2pt 2pt 2pt gray;
+}
+
+.GroupName{
+    padding: 10pt 10pt 10pt 10pt;
+    background-color: darkslategray;
+    color:white;
+    text-align: center;
+}

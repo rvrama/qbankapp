@@ -1,0 +1,67 @@
+  
+   .Container{
+     width:80pt;
+     height:100%;
+     margin: auto;
+     border: 2pt dashed; 
+   }
+   
+   .Top{
+     width:60%;
+     height:20%;
+     background: linear-gradient(#f307d4, #c2518f);;
+     border-radius:50% 50% 0 0;
+     margin:auto;
+   }
+   
+   .Left{
+     width:10%;
+     height:98%;
+     background: linear-gradient(#f307d4, #c2518f);
+     margin: auto;
+     position:absolute;
+     left:17pt;
+     top:1pt;
+   }
+   
+   .Base {
+     margin:auto;
+     position:relative;
+     height:40%;
+   }
+   
+   .Bottom{
+     width:60%;
+     height:45%;
+     background: linear-gradient(#f307d4, #c2518f);
+     border-radius:0 0 50% 50%;
+     margin:2pt auto;
+   }
+   
+   .Middle{
+     height:60%;
+     margin:auto;
+     position:relative;
+   }
+   
+   .Right{
+     width:10%;
+     height:98%;
+     background: linear-gradient(#f307d4, #c2518f);
+     margin: 1pt auto;
+     position:absolute;
+     left:56pt;
+     top:1pt;
+   }
+   
+   .Tail{
+     width:10%;
+     height:38%;
+     background: linear-gradient(#f307d4, #c2518f);
+     position:absolute;
+     left:60pt;
+     top:1pt;
+     border-radius: 0 20% 20%;
+     z-index:-10;
+     transform: rotate(30deg);
+   }

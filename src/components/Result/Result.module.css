@@ -1,0 +1,11 @@
+.Result{
+    background-color: honeydew;
+    color:black;
+    border: 2pt solid black;
+    box-shadow: 2pt 2pt 2pt 2pt gray;
+    padding: 10pt 10pt 10pt 10pt;
+    margin:10pt 10pt 10pt 10pt;
+    box-sizing: border-box;
+    display:flex;
+    justify-content: space-between;
+}

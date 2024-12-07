@@ -1,0 +1,115 @@
+.NoQuestions{
+    display: flex;
+    background-color: gray;
+    color:wheat;
+    margin:10px 10px 10px 10px;
+}
+
+.NoQuestionsLabel{
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size:6pt;
+    color:black;
+    border: 1pt solid black;
+    background-color: rgb(153, 146, 146);
+    text-align: center;
+    font-weight: bold;
+}
+
+.NotAttempted{
+    display: flex;
+    background-color: darkslategray;
+    color:wheat;
+    margin:10px 10px 10px 10px;
+}
+
+.NotAttempted:hover{
+    cursor: pointer;
+    color:tomato;
+    }
+
+.AttemptedOnce{
+    display: flex;
+    background-color: green;
+    color:wheat;
+    margin:10px 10px 10px 10px;
+}
+
+.AttemptedOnce:hover{
+    cursor: pointer;
+    color:tomato;
+    }
+
+.MaxAttempted{
+    display: flex;
+    background-color:coral;
+    color:wheat;
+    margin:10px 10px 10px 10px;
+}
+
+.MaxLabelAttempts{
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size:6pt;
+    color:white;
+    border: 1pt solid black;
+    background-color: brown;
+    text-align: center;
+    font-weight: bold;
+}
+
+.OnceLabelAttempts{
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size:6pt;
+    color:black;
+    font-weight: bold;
+    border: 1pt solid black;
+    background-color:mediumseagreen;
+    text-align: center;
+}
+
+.NoLabelAttempts{
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size:6pt;
+    color: black;
+    border: 1pt solid black;
+    background-color:gray;
+    text-align: center;
+    font-weight: bold;
+}
+
+.GroupName{
+    margin: 1px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    font-size:14pt;
+    letter-spacing: 2pt;
+    text-align: center;
+}
+
+.GroupSummary{
+    margin: 10px 10px 10px 10px;
+    font-size:10pt;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@media (min-width:500px){
+    .Group{
+        margin: 10px 10px 10px 10px;
+        padding: 10px 10px 10px 10px;
+        width:25%;
+        background-color: darkslategray;
+        color:wheat;
+    }    
+}
+
+@media (min-width:1000px){
+    .Group{
+        margin: 10px 10px 10px 10px;
+        padding: 10px 10px 10px 10px;
+        width:28%;
+        background-color: darkslategray;
+        color:wheat;
+    }    
+}

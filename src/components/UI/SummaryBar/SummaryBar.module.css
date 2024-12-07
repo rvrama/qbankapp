@@ -1,0 +1,23 @@
+.Breadcrumb{
+    display: inline-block;
+    border: 1px solid coral;
+    color:white;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+}
+
+.Breadcrumb:hover{
+    cursor: pointer;
+}
+
+@media (min-width:500px) {
+    .Breadcrumb{
+        display: inline-block;
+        width:20%;
+        color:white;
+        border: 2px solid coral;
+        font-size: 12pt;
+        margin: 5px 5px 5px 5px;
+        padding: 5px 5px 5px 5px;
+    }    
+}

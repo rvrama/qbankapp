@@ -1,0 +1,85 @@
+.Auth {
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 2px 3px #ccc;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+}
+ 
+.AuthBGColorDuringSignIn {
+    /* background-color: darkslategray; */
+    background-color: rgb(175, 206, 206);
+}
+
+
+.AuthBGColorDuringSignUp {
+    background-color: rgb(90, 179, 230);
+}
+
+.Title {
+    color:tomato;
+    line-height: 2.5em;
+    margin: 10px auto;
+    font-weight: bold;
+}
+
+.ErrorMsg {
+color:red;
+}
+
+.InfoMsg {
+color: black;
+}
+
+.Tab {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.SignInTab {
+    color:black;
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+    font-weight: bolder;
+    padding: 10px 10px 10px 10px;
+    border-bottom: none;
+    justify-items: space-evenly;
+    background-color: rgb(175, 206, 206);
+}
+
+.SignInTab:hover {
+    cursor: pointer;
+}
+
+.SignUpTab {
+    color:black;
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+    padding: 10px 10px 10px 10px;
+    border-bottom: none;
+    font-weight: bolder;
+    justify-items: space-evenly;
+    background-color: rgb(90, 179, 230);
+}
+
+.SignUpTab:hover {
+    cursor: pointer;
+}
+
+/* 
+.SignTabActive {
+    color: wheat;
+    background-color: transparent;
+    text-align: center;
+} */
+
+
+@media (min-width: 600px) {
+    .Auth {
+        width: 500px;
+    }
+}

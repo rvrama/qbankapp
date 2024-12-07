@@ -1,0 +1,22 @@
+.Btn{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    color:white;
+    padding-left: 20pt;
+    padding-right: 20pt;
+    margin: 10px auto;
+    
+    border-radius: 5px;
+}
+
+.Placeholder {
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin:auto
+}
+
+.Btn:hover {
+    cursor: pointer;
+}

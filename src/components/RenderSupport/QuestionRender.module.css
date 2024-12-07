@@ -1,0 +1,15 @@
+.Qtnscreen{
+    display: inline-flexbox;
+    margin:5px 5px 5px 5px;
+    padding:5px 5px 5px 5px;
+    background-color: darkslategray;
+    border: 2pt solid coral;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align:left;
+   }
+   
+.QtnTxt{
+    word-wrap: normal;
+    color: white;
+}
+   

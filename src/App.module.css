@@ -1,0 +1,30 @@
+/* .Content {
+  text-align: center;
+  margin:52pt;
+  background-color: linen;
+  color:black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+
+
+.Apptitle {
+  padding-top: 10px;
+  margin-top: 55px;
+  color:black;
+  text-align: center;
+}
+
+.Appintro {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.App {
+  text-align: center;
+  background-color: linen;
+  color:black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
