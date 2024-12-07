@@ -1,3 +1,5 @@
+## This is an updated version of the QuestionBank app with React v18+ and using Asp.Net Core Web API (C#) to point to APIs
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
