@@ -36,25 +36,7 @@ sideDrawerToggleHandler = () => {
 
 
   render() {
-
-    console.log("in app"); 
-    // let authLink; 
-
-    // if (this.props.location.search &&  this.props.location.search.includes("code"))
-    // {
-    //   authLink = <a href={this.state.LogoutURL}>Logout</a>;
-    // }
-    // else {
-    //   authLink = <a href={this.state.LoginURL}>Login</a>;
-    // }
-    // if (this.props.location.pathname !== "/question" && this.props.location.pathname !== "/auth") {
-    //   this.props.history.replace({pathname:"/question", search:this.props.location.search}); 
-    // }
-    // else if (this.props.location.pathname === "/question" && !this.props.location.search.includes("code"))
-    // {
-    //   this.props.history.push({pathname:"/auth", search: this.props.location.search});
-    // }
-    
+  
     let routes = (
       <Routes>
         <Route path="/logout" element={<Logout />} />

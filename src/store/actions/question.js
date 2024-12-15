@@ -1,6 +1,8 @@
 
 import axios from 'axios';
 import * as actionTypes from './actionType';
+import './../../urls';
+import { GROUP_API_CALLER, QUESTION_API_CALLER } from './../../urls';
 
 export const updateSelectedValue = (selectedValue) => {
     return {
@@ -19,7 +21,7 @@ export const loadQuestionsFailed = (err) => {
 
 export const loadQuestionsSuccess = (data, grpId) => {
     console.log("Load Question Success - "+ data);
-    let filteredData = data; //data.filter(f => f.groupId === grpId);
+    let filteredData = data.filter(f => f.groupId === grpId);
     filteredData = (filteredData.length > 0) ? filteredData :null;
     return {
         type:actionTypes.LOAD_QUESTIONS_SUCCESS,
@@ -57,14 +59,13 @@ export const setSelectedGroupId = (groupId) => {
 
 export const loadQuestions = (grpId) => {
     return dispatch => {
-        axios.get("http://localhost:5031/api/questionsList",
+        axios.get(QUESTION_API_CALLER,
                     { 
-                        // // headers: { 
-                        // //             "Authorization": localStorage.getItem("token") 
-                        // //         }
+                        headers: { 
+                                    "Authorization": localStorage.getItem("token") 
+                                }
                         })
         .then(resp => {
-            console.log("Load questions "+resp.data);
             dispatch(loadQuestionsSuccess(resp.data, grpId));  //until we pass this in URL to filter in API itself
             })
         .catch(err => {
@@ -75,9 +76,8 @@ export const loadQuestions = (grpId) => {
 
 export const loadGroups = () => {
     return dispatch => {
-        axios.get("http://localhost:5031/api/Group")
+        axios.get(GROUP_API_CALLER)
         .then(resp => {
-            console.log ("loading groups " +resp);
             dispatch(loadGroupsSuccess(resp.data));
             })
         .catch(err => {

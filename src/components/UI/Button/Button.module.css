@@ -22,11 +22,13 @@
 }
 
 .Success {
-    color: green;
-    /* border-style: double;
+    color: white;
+    border-style: double;
     padding: 2pt;
-    background-color: black;
-    border-color: green; */
+    font-weight: lighter;
+    background-color: green;
+    border-color: green;
+    border-radius: 7pt 7pt;
 }
 
 .Danger {

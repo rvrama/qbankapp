@@ -16,8 +16,8 @@
 .NavigationItem a:active,
 .NavigationItem a.active {
     color: white;
-    background-color: darkslategray;
-    border-bottom: 2px solid red;
+    background-color: rgb(86, 210, 241);
+    border-bottom: 5px solid red;
 }
 
 @media (min-width: 500px) {
@@ -36,11 +36,10 @@
         border-bottom: 4px solid transparent;
     }
     
-    .NavigationItem a:hover,
+    /* .NavigationItem a:hover,
     .NavigationItem a:active,
     .NavigationItem a.active {
         background-color: darkslategray;
         border-bottom: 4px solid red;
-        color: white;
-    }
+    } */
 }

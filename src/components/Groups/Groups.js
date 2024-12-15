@@ -23,7 +23,8 @@ const Groups = (props) => {
             
             const filterResults = (props.userResults && props.userResults.length > 0) ? props.userResults.filter((f,index) => f.groupId === grp.id) : null;
             const filterResultsLength = (filterResults) ? filterResults.length : 0;
-
+            
+            console.log(filterResults + " " + filterResultsLength + " " +grp.id);
             let groupsInfo; 
             //hack - change the below logic 'filterResultsLength >=0 to > 0 once results are working fine
            if (filterResultsLength >= 0 && filterResultsLength < MAX_ATTEMPTS)  //1 more attempt available

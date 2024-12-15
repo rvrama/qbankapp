@@ -9,12 +9,12 @@
  
 .AuthBGColorDuringSignIn {
     /* background-color: darkslategray; */
-    background-color: rgb(175, 206, 206);
+    background-color: #3807eb;/* rgb(175, 206, 206);*/
 }
 
 
 .AuthBGColorDuringSignUp {
-    background-color: rgb(90, 179, 230);
+    background-color:  rgb(86, 210, 241);
 }
 
 .Title {
@@ -47,7 +47,7 @@ color: black;
     padding: 10px 10px 10px 10px;
     border-bottom: none;
     justify-items: space-evenly;
-    background-color: rgb(175, 206, 206);
+    background-color: #3807eb;
 }
 
 .SignInTab:hover {
@@ -63,7 +63,7 @@ color: black;
     border-bottom: none;
     font-weight: bolder;
     justify-items: space-evenly;
-    background-color: rgb(90, 179, 230);
+    background-color: rgb(86, 210, 241);
 }
 
 .SignUpTab:hover {

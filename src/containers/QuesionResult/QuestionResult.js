@@ -24,7 +24,7 @@ class QuestionResult extends Component {
                     choiceObj) => {
         let choices;
 
-        if (choiceType === '1') {
+        if (choiceType === 1) {
             if ((index + 1) === Number(answerChoiceId)) {
                 if (currentQtnResultObj && ((index + 1) === Number(currentResultSelection))) {
                     choices = (
@@ -66,7 +66,7 @@ class QuestionResult extends Component {
 
             }
         }
-        else if (choiceType === '2') {
+        else if (choiceType === 2) {
 
             const rowId = Number(index) + 1;
 
@@ -115,7 +115,7 @@ class QuestionResult extends Component {
             let options = '';
             let questions = this.props.questionList;
             let result = this.props.results;
-
+            console.log(questions);
             if (questions) {
                 questionList = questions.map((f, qIndex) => {
 

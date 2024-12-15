@@ -19,7 +19,7 @@ import * as actions from '../../store/actions/index';
 const Question = (props) => {
 
     const [message, setMessage] = useState('');
-    //const [timelapse, setTimelapse] = useState(false);
+    const [timelapse, setTimelapse] = useState(false);
     const [timeSpent, setTimeSpent] = useState(0);
     
     const navigate = useNavigate();
@@ -37,7 +37,6 @@ const Question = (props) => {
     }
 
     const QuestionNextHandler = () => {
-        console.log(props.isAuthenticated);
 
         if (props.isAuthenticated) {
 
@@ -147,7 +146,10 @@ const Question = (props) => {
 
 
     const SubmitButtonClickHandler = () => {
-
+        // props.results.map(x => {
+        //     console.log("Result "+ x.id + " "+ x.answer + " " + x.selected);
+        // });
+        
         const [, score] = setResultMessage(props.results, props.questionList.length);
 
         //store the results in the backend
@@ -160,19 +162,18 @@ const Question = (props) => {
     }
     
     useEffect (()=> {
-        //setTimelapse(false); 
+        setTimelapse(false); 
         props.OnResetResultsOnLoad();
         props.OnSetQuestionId(1); //to reset the ctr to 1 so that the Questions will appear from begining if user choose Question Nav from Results page or anywhere.
         props.OnLoadQuestions(props.selectedGroupId);        
     },[]);
 
     const setResultMessage = (result, questionsCount) => {
-
         const res = result;
-        const objIsCorrect = res.filter(f => (f.answer === f.selected));
+        const objIsCorrect = res.filter(f => (f.answer === Number(f.selected)));
         const score = ((objIsCorrect.length/questionsCount)*100).toFixed(1);
 
-        return [objIsCorrect, score]; 
+        return [objIsCorrect, Number(score)]; 
     }
 
     const cancelShowResultHandler = () => {
@@ -180,7 +181,7 @@ const Question = (props) => {
     }
 
     const cancelTimerHandler= () => {
-        //setTimelapse(false);
+        setTimelapse(false);
         navigate("/");
     }
   
@@ -190,16 +191,13 @@ const Question = (props) => {
     }
 
     const TimerRanOver = (props) => {
-        //setTimelapse(true);
+        setTimelapse(true);
     }
 
         let errorMsg;
 
-        console.log("From question - loggedin?" + props.questionList);
         if (props.isAuthenticated) { //loggedIn
-
-           //if (!setTimelapse) {
-           if (true){
+          if (!timelapse) {
                 let showButtons;
                 if (props.showResult){
                     const res = [...props.results];
@@ -283,9 +281,9 @@ const Question = (props) => {
                     return (
                         <Bound>
                             {/* Let us test the timer component after fixing other issues  */}
-                        {/* <Timer availableTime={(props.questionList) ? props.questionList.length*60000 : 60000} 
+                        <Timer availableTime={(props.questionList) ? props.questionList.length*60000 : 60000} 
                                 onTimeOut={TimerRanOver}
-                                /> */}
+                                />
                         <QuestionContentRender 
                             summary={summary}
                             errorMsg={errorMsg}
@@ -296,11 +294,11 @@ const Question = (props) => {
                     );
                 }   
             }
-            // else {
-            //     return (<Modal show={timelapse} modalClosed={cancelTimerHandler}>
-            //         <h2> Exhausted your time limit!!!.  Your test is not submitted.</h2>
-            //     </Modal>);
-            // }
+            else {
+                return (<Modal show={timelapse} modalClosed={cancelTimerHandler}>
+                    <h2> Exhausted your time limit!!!.  Your test is not submitted.</h2>
+                </Modal>);
+            }
         }
       
     }

@@ -90,39 +90,39 @@ export const auth = (email, password, isSignup) => {
     
             //To avoid using Cognito, skipping this code.  Uncomment it to use Cognito user login user flow
 
-            user.authenticateUser(authDetails, {
-                onSuccess: response => {
-                    const expirationDate = new Date(new Date().getTime() + 3600000); //30 min TTL //response.idToken.payload.exp);
-                    const authenticatedUserId = response.idToken.payload.sub;
+            // user.authenticateUser(authDetails, {
+            //     onSuccess: response => {
+            //         const expirationDate = new Date(new Date().getTime() + 3600000); //30 min TTL //response.idToken.payload.exp);
+            //         const authenticatedUserId = response.idToken.payload.sub;
 
-                    localStorage.setItem('token', response.idToken.jwtToken);
-                    localStorage.setItem('expirationDate', expirationDate);
-                    localStorage.setItem('userId', authenticatedUserId);
+            //         localStorage.setItem('token', response.idToken.jwtToken);
+            //         localStorage.setItem('expirationDate', expirationDate);
+            //         localStorage.setItem('userId', authenticatedUserId);
                     
-                    dispatch(authSuccess(response.idToken.jwtToken, authenticatedUserId, ''));
-                    dispatch(checkAuthTimeout((expirationDate.getTime() - new Date().getTime()) ));
+            //         dispatch(authSuccess(response.idToken.jwtToken, authenticatedUserId, ''));
+            //         dispatch(checkAuthTimeout((expirationDate.getTime() - new Date().getTime()) ));
 
-                },
-                onFailure : err => {
-                    dispatch(authFail(err));
-                },
-                newPasswordRequired: newPassdata => {
-                    dispatch(authFail(newPassdata));
-                }
-            })
+            //     },
+            //     onFailure : err => {
+            //         dispatch(authFail(err));
+            //     },
+            //     newPasswordRequired: newPassdata => {
+            //         dispatch(authFail(newPassdata));
+            //     }
+            // })
 
             //BY PASS and make the login default.  Comment out the following 7 lines and uncomment the previous code
             //while using cognito for login
 
-            // const expirationDate = new Date(new Date().getTime() + 3600000); //30 min TTL //response.idToken.payload.exp);
-            // const authenticatedUserId = 1; //hardcoded
-            // const hardcodedjwttoken = "jwttokenhardcoded";
-            // localStorage.setItem('token', hardcodedjwttoken);
-            // localStorage.setItem('expirationDate', expirationDate);
-            // localStorage.setItem('userId', authenticatedUserId);
+            const expirationDate = new Date(new Date().getTime() + 3600000); //30 min TTL //response.idToken.payload.exp);
+            const authenticatedUserId = 'hardc-coded-user-id'; //hardcoded
+            const hardcodedjwttoken = "jwttokenhardcoded";
+            localStorage.setItem('token', hardcodedjwttoken);
+            localStorage.setItem('expirationDate', expirationDate);
+            localStorage.setItem('userId', authenticatedUserId);
                     
-            // dispatch(authSuccess(hardcodedjwttoken, authenticatedUserId, ''));
-            // dispatch(checkAuthTimeout((expirationDate.getTime() - new Date().getTime()) ));
+            dispatch(authSuccess(hardcodedjwttoken, authenticatedUserId, ''));
+            dispatch(checkAuthTimeout((expirationDate.getTime() - new Date().getTime()) ));
 
             
         }
