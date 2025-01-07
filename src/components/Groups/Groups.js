@@ -24,10 +24,9 @@ const Groups = (props) => {
             const filterResults = (props.userResults && props.userResults.length > 0) ? props.userResults.filter((f,index) => f.groupId === grp.id) : null;
             const filterResultsLength = (filterResults) ? filterResults.length : 0;
             
-            console.log(filterResults + " " + filterResultsLength + " " +grp.id);
             let groupsInfo; 
             //hack - change the below logic 'filterResultsLength >=0 to > 0 once results are working fine
-           if (filterResultsLength >= 0 && filterResultsLength < MAX_ATTEMPTS)  //1 more attempt available
+           if (filterResultsLength > 0 && filterResultsLength < MAX_ATTEMPTS)  //1 more attempt available
            {
             groupsInfo =  <Group 
                 key={grp.id}
@@ -47,13 +46,12 @@ const Groups = (props) => {
                 />    
             }
             else if (filterResultsLength === 0) {  //no attempts made
-                console.log(grp.id);
                 groupsInfo =  <Group 
                 key={grp.id}
                 groupName={grp.groupName} 
                 countByGroup= {grp.countByGroup} //{props.isAuthenticated ?  grp.QuestionsCount  : null}
                 groupSummary={grp.groupSummary}
-                attempts={grp.QuestionsCount ? "0" : "NA"} //show groups in darkslategrey
+                attempts= {grp.countByGroup ? "0" : "NA"} //show groups in darkslategrey
                 click={(opt) => props.groupClicked(grp.id)}/>        
             }
             return groupsInfo;

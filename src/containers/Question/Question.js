@@ -146,10 +146,7 @@ const Question = (props) => {
 
 
     const SubmitButtonClickHandler = () => {
-        // props.results.map(x => {
-        //     console.log("Result "+ x.id + " "+ x.answer + " " + x.selected);
-        // });
-        
+               
         const [, score] = setResultMessage(props.results, props.questionList.length);
 
         //store the results in the backend

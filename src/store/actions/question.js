@@ -20,7 +20,6 @@ export const loadQuestionsFailed = (err) => {
 }
 
 export const loadQuestionsSuccess = (data, grpId) => {
-    console.log("Load Question Success - "+ data);
     let filteredData = data.filter(f => f.groupId === grpId);
     filteredData = (filteredData.length > 0) ? filteredData :null;
     return {
@@ -40,7 +39,6 @@ export const loadGroupsFailed = (err) => {
 }
 
 export const loadGroupsSuccess = (data) => {
-    console.log(data);
     return {
         type:actionTypes.LOAD_GROUPS_SUCCESS,
         groupsList : data

@@ -69,7 +69,6 @@ export const storeResults = (userId, groupId, attemptResults, timeSpent, score) 
             timeSpent : timeSpent,
             score:Number(score)
         };
-        console.log("before calling post results " + resultData.results);
 
         const url = URLS.POST_RESULT_API;        
         axios.post(url, resultData)

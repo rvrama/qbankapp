@@ -70,7 +70,6 @@ const loadGroupsFail = (state, action) => {
 
 
 const addResults = (state, action) => {
-    console.log(state.results);
     return updateObject(state, { results: action.results })
 };
 

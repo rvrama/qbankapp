@@ -116,7 +116,7 @@ class QuestionResult extends Component {
             let options = '';
             let questions = this.props.questionList;
             let result = this.props.results;
-            console.log(questions);
+          
             if (questions) {
                 questionList = questions.map((f, qIndex) => {
 

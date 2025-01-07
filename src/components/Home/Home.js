@@ -16,8 +16,6 @@ import * as actions from '../../store/actions/index';
   }
 
   const OnGroupItemClicked = (grpId) => {
-    console.log(grpId);
-    console.log(props.isAuthenticated);
       if (props.isAuthenticated){
         props.OnSetSelectedGroupId(grpId);
         //set the group name selected in the store
