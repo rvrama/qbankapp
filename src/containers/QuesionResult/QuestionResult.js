@@ -70,7 +70,8 @@ class QuestionResult extends Component {
 
             const rowId = Number(index) + 1;
 
-            if (answerChoiceId.includes(rowId)) {
+            //if (answerChoiceId.includes(rowId)) {
+                if (answerChoiceId === rowId) {
                 if (currentQtnResultObj && currentResultSelection.includes(rowId)) {
                     choices = (
                         <div className={classes.Answer}>

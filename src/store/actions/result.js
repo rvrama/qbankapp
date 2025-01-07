@@ -7,7 +7,10 @@ export const loadResults = (userId) => {
         const queryParams = '?userId=' + userId;
         axios.get(URLS.GET_RESULT_API + queryParams)
         .then(resp => {
-            //const fetchedResults = resp.data;
+              // sample response data (resp.data) for reference
+              // [{"userId":"test-user","groupId":2,"timeSpent":5000,"score":0,"results":[{"id":1,"answer":4,"selected":2}]},
+              // {"userId":"test-user","groupId":3,"timeSpent":5000,"score":100,"results":[{"id":1,"answer":4,"selected":4}]}]
+
            const fetchedResults = [];
             for ( let key in resp.data ) {
                 fetchedResults.push( {
@@ -15,14 +18,13 @@ export const loadResults = (userId) => {
                     id: key
                 } );
             }
-                // fetchedResults.push( 
-                //      resp.data
-                // )
+          
             dispatch(loadResultsSuccess(fetchedResults));
-            })
-        .catch(err => {
-            dispatch(loadResultsFailed(err));
-        }); 
+          }
+       )
+      .catch(err => {
+          dispatch(loadResultsFailed(err));
+      }); 
     }
 }
 

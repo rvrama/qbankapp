@@ -46,17 +46,17 @@ class Results extends Component {
                     //         + " result " + this.state.result[index] + " showresults " +this.state.showResults[index]);
                     // })
                     
-                   filteredUserResults = this.props.userResults.filter(f=> f.groupId === grpObj.GroupId);            
+                   filteredUserResults = this.props.userResults.filter(f=> f.groupId === grpObj.id);            
                    
                    if (filteredUserResults && filteredUserResults.length > 0){
                         
                         groupInfo = (
                                     <div className={classes.GroupName}>
-                                    <div>{grpObj.GroupName}</div>
+                                    <div>Group : {grpObj.groupName}</div>
                                     </div>)
                         
                         resultsToShow = filteredUserResults.map((res,index) => {
-                              
+                     
                                 return (
                                     <Result 
                                         key={res.id}
@@ -79,7 +79,7 @@ class Results extends Component {
                             }
                             return (
                                 <div className={classes.GroupBlock}>
-                                    {groupInfo}
+                                    {groupInfo} 
                                     {resultsToShow}
                                 </div>
                             );

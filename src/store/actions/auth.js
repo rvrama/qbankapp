@@ -115,7 +115,7 @@ export const auth = (email, password, isSignup) => {
             //while using cognito for login
 
             const expirationDate = new Date(new Date().getTime() + 3600000); //30 min TTL //response.idToken.payload.exp);
-            const authenticatedUserId = 'hardc-coded-user-id'; //hardcoded
+            const authenticatedUserId = 'test-user'; //'hardc-coded-user-id'; //hardcoded
             const hardcodedjwttoken = "jwttokenhardcoded";
             localStorage.setItem('token', hardcodedjwttoken);
             localStorage.setItem('expirationDate', expirationDate);
