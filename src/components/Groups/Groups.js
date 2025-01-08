@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import classes from './Groups.module.css';
 import Group from './Group/Group';
 import { connect } from 'react-redux';
-import {useNavigate} from 'react-router-dom';
 import * as actions from '../../store/actions/index';
 
 const MAX_ATTEMPTS = 2;

@@ -20,7 +20,7 @@ const Question = (props) => {
 
     const [message, setMessage] = useState('');
     const [timelapse, setTimelapse] = useState(false);
-    const [timeSpent, setTimeSpent] = useState(0);
+    //const [timeSpent, setTimeSpent] = useState(0); received in props
     
     const navigate = useNavigate();
 
@@ -167,7 +167,7 @@ const Question = (props) => {
 
     const setResultMessage = (result, questionsCount) => {
         const res = result;
-        const objIsCorrect = res.filter(f => (f.answer === Number(f.selected)));
+        const objIsCorrect = res.filter(f => (f.answer === f.selected));
         const score = ((objIsCorrect.length/questionsCount)*100).toFixed(1);
 
         return [objIsCorrect, Number(score)]; 
