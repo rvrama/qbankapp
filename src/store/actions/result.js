@@ -63,6 +63,7 @@ export const storeResults = (userId, groupId, attemptResults, timeSpent, score) 
 
     return dispatch => {
         const resultData = {
+            Id: userId + Date.now(),
             userId: userId,
             groupId: groupId,
             results: attemptResults, // should be an array containing attemptId, score, resultsArray
